@@ -34,3 +34,9 @@ def encipher(sourcemessagefilename, bookfilename, outputfilename):
                                  ", was not found in the book")
 
             enciphered.append(charpos)
+            
+    with open(outputfilename, "wt") as of:
+        json.dump(enciphered, of)
+
+    print("Enciphering completed.")
+    return
