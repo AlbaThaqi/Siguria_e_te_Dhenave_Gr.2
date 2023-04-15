@@ -73,6 +73,19 @@ def decipher(encipheredmessagefilename, bookfilename, decipheredmessagefilename)
 
         uf.write("".join(decipheredmsg))
 
+       
+        def main(args):
+
+
+    if (args.mode == 'encipher' or args.mode == 'e'):
+
+        encipher(args.inputfilename, args.bookfilename, args.outputfilename)
+
+    else:
+
+        decipher(args.inputfilename, args.bookfilename, args.outputfilename)
+
+    return
  
 
     print("Deciphering completed.")
