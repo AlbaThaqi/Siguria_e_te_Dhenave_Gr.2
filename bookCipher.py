@@ -40,3 +40,43 @@ def encipher(sourcemessagefilename, bookfilename, outputfilename):
 
     print("Enciphering completed.")
     return
+
+def decipher(encipheredmessagefilename, bookfilename, decipheredmessagefilename):
+
+ 
+
+    print("Deciphering message : " + encipheredmessagefilename)
+
+    print("Using book            : " + bookfilename)
+
+    print("Output to             : " + decipheredmessagefilename)
+
+ 
+
+    decipheredmsg = []
+
+ 
+
+    with open(encipheredmessagefilename, "rt") as ef, open(bookfilename, "rt", encoding="utf-8") as bkf:
+
+        enciphered = json.load(ef)
+
+        booktext = bkf.read()
+
+        for encipheredpos in enciphered:
+
+            decipheredmsg.append(booktext[encipheredpos])
+
+ 
+
+    with open(decipheredmessagefilename, "wt", encoding='UTF-8') as uf:
+
+        uf.write("".join(decipheredmsg))
+
+ 
+
+    print("Deciphering completed.")
+
+ 
+
+    return
