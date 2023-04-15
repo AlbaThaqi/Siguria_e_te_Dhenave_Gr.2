@@ -34,62 +34,57 @@ def encipher(sourcemessagefilename, bookfilename, outputfilename):
                                  ", was not found in the book")
 
             enciphered.append(charpos)
-            
+
     with open(outputfilename, "wt") as of:
         json.dump(enciphered, of)
 
     print("Enciphering completed.")
     return
 
+
 def decipher(encipheredmessagefilename, bookfilename, decipheredmessagefilename):
 
- 
-
     print("Deciphering message : " + encipheredmessagefilename)
-
     print("Using book            : " + bookfilename)
-
     print("Output to             : " + decipheredmessagefilename)
-
- 
 
     decipheredmsg = []
 
- 
-
     with open(encipheredmessagefilename, "rt") as ef, open(bookfilename, "rt", encoding="utf-8") as bkf:
-
         enciphered = json.load(ef)
-
         booktext = bkf.read()
-
         for encipheredpos in enciphered:
-
             decipheredmsg.append(booktext[encipheredpos])
 
- 
-
     with open(decipheredmessagefilename, "wt", encoding='UTF-8') as uf:
-
         uf.write("".join(decipheredmsg))
-
-       
-        def main(args):
-
-
-    if (args.mode == 'encipher' or args.mode == 'e'):
-
-        encipher(args.inputfilename, args.bookfilename, args.outputfilename)
-
-    else:
-
-        decipher(args.inputfilename, args.bookfilename, args.outputfilename)
-
-    return
- 
 
     print("Deciphering completed.")
 
- 
-
     return
+
+def main(args):
+    
+    if (args.mode == 'encipher' or args.mode == 'e'):
+        encipher(args.inputfilename, args.bookfilename, args.outputfilename)
+    else:
+        decipher(args.inputfilename, args.bookfilename, args.outputfilename)
+    return
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description='Book Cipher')
+    required = parser.add_argument_group('required arguments')
+    required.add_argument('-m', '--mode', choices=['encipher', 'e', 'decipher', 'd'],
+                        help='Mode: encipher or decipher', required=True, dest='mode')
+
+    required.add_argument("-b", "--bookfilename",
+                        help="Book filename", required=True, dest='bookfilename')
+
+    required.add_argument("-i", "--inputfilename",
+                        help="Input file to be processed", required=True, dest='inputfilename')
+
+    required.add_argument("-o", "--outputfilename",
+                        help="Output file to be created", required=True, dest='outputfilename')
+
+    main(parser.parse_args())
