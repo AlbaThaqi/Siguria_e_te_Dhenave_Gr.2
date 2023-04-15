@@ -19,7 +19,7 @@ Për enkriptim të mesazhit përdoret komanda si më poshtë:
 
 , ku:
 
--m përcakton modin (për enkriptim dhe dekriptim);
+-m përcakton modin (encipher / decipher ose e / d);
 
 -b përcakton librin që do të përdoret për enkriptim apo dekriptim;
 
