@@ -7,7 +7,9 @@ Këta numra më pas u transmetohen marrësit, i cili përdor të njëjtin libër
 
 ## Ekzekutimi i programit të implementuar për Book Cipher
 
-Ekzekutimi i programit bëhet përmes command line. 
+Programi për Book Cipher është implementuar në gjuhën programuese Python në kuadër të lëndës Siguria e të Dhënave.
+
+Ekzekutimi i këtij programi bëhet përmes command line. 
 
 Për enkriptim të mesazhit përdoret komanda si më poshtë:
 
@@ -26,3 +28,28 @@ Për enkriptim të mesazhit përdoret komanda si më poshtë:
 -i përcakton fajllin e mesazhit që do të enkriptohet apo dekriptohet;
 
 -o përcakton fajllin ku do të ruhet rezultati pas ekzekutimit.
+
+
+## Libraritë e nevojshme
+
+Për ta ekzekutuar programin duhet të keni të instaluar paraprakisht ndonjë nga environments siç janë PyCharm apo IDLE Python dhe libraritë e Python si më poshtë:
+
+- argparse
+
+- json
+
+- random
+
+Këto librari mund të instalohen përmes komandës 'pip'. Shembull:
+
+`pip install argparse`
+
+## Anëtarët e grupit
+
+- Alba Thaqi
+
+- Albatin Totaj
+
+- Ajshe Selmani
+
+- Bleron Mexhuani
