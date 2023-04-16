@@ -1,11 +1,11 @@
 # Book Cipher
 
-## Përshkrimi i shkurtër i Book Cipher
+## Përshkrim i shkurtër i Book Cipher
 Book Cipher është një teknikë kriptografike e cila përdor një libër ose një pjesë të tekstit si çelës për të enkriptuar apo dekriptuar një mesazh sekret. 
 Në një book cipher, teksti i mesazhit konvertohet në një sekuencë numrash që u referohen fjalëve ose shkronjave specifike në libër. 
 Këta numra më pas u transmetohen marrësit, i cili përdor të njëjtin libër për të kërkuar fjalët ose shkronjat përkatëse dhe për të fituar mesazhin origjinal.
 
-## Ekzekutimi i programit të implementuar për Book Cipher
+## Programi i implementuar për Book Cipher dhe ekzekutimi i tij
 
 Programi për Book Cipher është implementuar në gjuhën programuese Python në kuadër të lëndës Siguria e të Dhënave.
 
