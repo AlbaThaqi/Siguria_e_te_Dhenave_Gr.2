@@ -5,11 +5,11 @@ Book Cipher është një teknikë kriptografike e cila përdor një libër ose n
 Në një book cipher, teksti i mesazhit konvertohet në një sekuencë numrash që u referohen fjalëve ose shkronjave specifike në libër. 
 Këta numra më pas u transmetohen marrësit, i cili përdor të njëjtin libër për të kërkuar fjalët ose shkronjat përkatëse dhe për të fituar mesazhin origjinal.
 
-## Programi i implementuar për Book Cipher dhe ekzekutimi i tij
+## Ekzekutimi i programt të implementuar për Book Cipher
 
-Programi për Book Cipher është implementuar në gjuhën programuese Python në kuadër të lëndës Siguria e të Dhënave.
+Programi për Book Cipher është implementuar në gjuhën programuese Python në kuadër të lëndës Siguria e të Dhënave dhe përmban pjesët për enkriptim dhe dekriptim të mesazhit.
 
-Ekzekutimi i këtij programi bëhet përmes command line. 
+Ekzekutimi i këtij programi bëhet përmes command line.  
 
 Për enkriptim të mesazhit përdoret komanda si më poshtë:
 
